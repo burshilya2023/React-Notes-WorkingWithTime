@@ -19,7 +19,6 @@ const WrapperTimeManagment = styled(motion.div)`
 `;
 
 const ChildrenDiv = styled.div`
-  padding: 10px;
   min-width: 400px;
   background: white;
   color: black;
@@ -29,15 +28,28 @@ const ChildrenDiv = styled.div`
 const WrapperSearch = styled.div`
   position: fixed;
   width: 100%;
-  height: 8vh;
+  padding-top: 35px;
   top: 0;
   left: 0;
   background: #a7a7a7;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   z-index: 100;
-  .childer {
+
+  .search_closed {
+    display: flex;
+  }
+  p {
+    cursor: pointer;
+    font-weight: 800;
+    height: 30px;
+    width: 30px;
+    color: #000000;
+    padding: 5px;
+    &:hover {
+      color: #9b0036;
+    }
   }
 `;
 
@@ -62,10 +74,10 @@ export const ModalWindowSearch = ({ children, setVisible, isVisible }) => {
     <div>
       {isVisible ? (
         <WrapperSearch onClick={() => setVisible(false)}>
-          <div className="children" onClick={(e) => e.stopPropagation()}>
-            {children}
+          <div className="search_closed">
+            <div onClick={(e) => e.stopPropagation()}>{children}</div>
+            <p>closed</p>
           </div>
-          <h3 style={{ margin: "10px" }}>cancellation</h3>
         </WrapperSearch>
       ) : null}
     </div>

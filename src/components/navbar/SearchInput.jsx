@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiDelete } from "react-icons/fi";
-import { FnCurrentTime } from "../../WorkWithDate/FormatDate";
 
 const InputWrapper = styled.div`
   display: flex;
@@ -11,7 +10,10 @@ const InputWrapper = styled.div`
   padding: 0px 5px;
   justify-content: center;
   border-radius: 6px;
-  width: 300px;
+  width: 25rem;
+  @media (max-width: 767px) {
+    width: 17rem;
+  }
   .icon {
     border-radius: 33px;
     display: flex;
@@ -31,6 +33,7 @@ const SearchInputdiv = styled.input`
   border: none;
   background: #ffffff;
   outline: none;
+
   &:focus {
     background: white;
   }

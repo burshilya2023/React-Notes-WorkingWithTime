@@ -10,10 +10,9 @@ const Wrapper = styled(motion.div)`
   grid-gap: 30px;
   width: 100%;
   margin-bottom: 25px;
-  @media (max-width: 500px) {
+  @media (max-width: 565px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 22px;
+    grid-template-columns: 1fr;
   }
 `;
 const H1 = styled(motion.div)`

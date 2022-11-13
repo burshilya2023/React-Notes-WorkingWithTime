@@ -10,7 +10,6 @@ const NoteWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  min-width: 200px;
 
   .note_name {
     resize: none;
